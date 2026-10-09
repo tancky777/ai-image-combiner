@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Image Combiner Prompt Guide: Merge Photos That Look Real</title>
+<meta name="description" content="A practical field guide to using an AI image combiner: how to pick source photos, prompt templates you can copy, and fixes for the most common merge problems.">
+<link rel="canonical" href="https://tancky777.github.io/ai-image-combiner/">
+<meta property="og:title" content="AI Image Combiner Prompt Guide">
+<meta property="og:description" content="Source photo checklist, copy-ready prompts and troubleshooting for merging photos with an AI image combiner.">
+<meta property="og:image" content="https://tancky777.github.io/ai-image-combiner/assets/ai-image-combiner.jpg">
+<meta property="og:type" content="article">
+<style>
+:root{--bg:#fbfbf8;--fg:#1c1f1a;--muted:#5d6458;--line:#e3e6dc;--card:#fff;--accent:#4d7c0f;--code:#f1f4ea}
+@media (prefers-color-scheme:dark){:root{--bg:#12140f;--fg:#ecefe6;--muted:#a3ab9a;--line:#2a2e24;--card:#1a1d16;--accent:#a3e635;--code:#20241b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:780px;margin:0 auto;padding:48px 16px 72px}
+h1{font-size:clamp(2rem,6vw,3rem);line-height:1.1;margin:0 0 16px;letter-spacing:-.02em}
+h2{font-size:1.5rem;margin:56px 0 12px;letter-spacing:-.01em}
+h3{font-size:1.1rem;margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede{font-size:1.15rem;color:var(--muted)}
+a{color:var(--accent)}
+img{max-width:100%;height:auto;border-radius:12px;display:block}
+figure{margin:24px 0}
+.cta{display:inline-block;background:var(--accent);color:var(--bg);font-weight:600;text-decoration:none;padding:12px 20px;border-radius:10px;margin:8px 0 0}
+pre{background:var(--code);border:1px solid var(--line);border-radius:10px;padding:14px 16px;white-space:pre-wrap;font:14px/1.55 ui-monospace,Consolas,monospace;margin:8px 0 20px}
+.tablewrap{overflow-x:auto;margin:16px 0}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.95rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+ul,ol{padding-left:22px;margin:0 0 16px}
+li{margin:6px 0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:20px 0}
+.steps div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.steps p{font-size:.95rem;margin:10px 0 0}
+footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<h1>AI Image Combiner Prompt Guide</h1>
+<p class="lede">Most disappointing merges come from two things: mismatched source photos and vague prompts. This guide covers both, with templates you can paste straight into an AI image combiner.</p>
+<p>The examples below were made with <a href="https://tancky.io">Tancky AI</a>, a free online AI image combiner that accepts 2 to 4 reference photos and a text prompt.</p>
+<a class="cta" href="https://tancky.io">Open the AI Image Combiner</a>
+
+<figure>
+<img src="assets/ai-image-combiner.jpg" alt="AI image combiner turning two separate portraits into one garden photo" width="1200" height="630">
+</figure>
+
+<h2>Three ways to put photos together</h2>
+<p>Before writing a prompt, it helps to know what an AI image combiner does differently from the older options.</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th></th><th>Photo collage</th><th>Manual compositing</th><th>AI image combiner</th></tr></thead>
+<tbody>
+<tr><th>Result</th><td>Photos side by side in a grid</td><td>One scene, built layer by layer</td><td>One scene, rendered as a new photo</td></tr>
+<tr><th>Lighting</th><td>Each photo keeps its own</td><td>Matched by hand</td><td>Matched automatically</td></tr>
+<tr><th>Cutouts and masks</th><td>None needed</td><td>Pen tool, feathering, edge refinement</td><td>None needed</td></tr>
+<tr><th>Skill required</th><td>Low</td><td>High</td><td>Low</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Source photo checklist</h2>
+<p>An AI image combiner can fix lighting. It cannot invent detail that was never in the photo. Check these before you upload:</p>
+<ul>
+<li><strong>Sharp subject.</strong> No motion blur, with the face or product in clear focus.</li>
+<li><strong>Similar camera height.</strong> An eye-level portrait sits naturally in an eye-level background. A top-down shot will not.</li>
+<li><strong>Enough resolution.</strong> Small, heavily compressed images lose facial detail and label text.</li>
+<li><strong>Uncovered subject.</strong> Hands, hair and product edges should not be cropped off or hidden.</li>
+<li><strong>One clear background.</strong> Decide which photo supplies the setting and say so in the prompt.</li>
+<li><strong>Supported format.</strong> JPG, PNG or WebP, between 2 and 4 images per merge.</li>
+</ul>
+
+<h2>Anatomy of a good prompt</h2>
+<p>A reliable prompt for an AI image combiner answers four questions in order:</p>
+<ol>
+<li><strong>Which image is the scene?</strong> Name the background reference.</li>
+<li><strong>What must stay unchanged?</strong> Faces, clothing, logos, furniture shape.</li>
+<li><strong>Where does each subject go?</strong> Position, scale, and what sits in front of what.</li>
+<li><strong>How should it be lit?</strong> Follow the light direction of the scene and add contact shadows.</li>
+</ol>
+
+<h2>Copy-ready prompt templates</h2>
+
+<h3>Two people into one photo</h3>
+<figure>
+<img src="assets/combine-two-people-800.webp" alt="Two separate portraits merged into one group photo by an AI image combiner" width="800" height="450" loading="lazy">
+</figure>
+<pre>Bring the two people from the reference photos together in one natural portrait. Use the garden bench from the first photo as the setting. Keep the face, hairstyle and clothing of each person exactly as shown. Seat them side by side at the same scale with a shared camera angle. Match the soft daylight and add natural shadows where they touch the bench.</pre>
+
+<h3>Portrait onto a new background</h3>
+<figure>
+<img src="assets/portrait-riverside-800.webp" alt="A studio portrait blended into a riverside scene by an AI image combiner" width="800" height="450" loading="lazy">
+</figure>
+<pre>Place the person from the portrait in the foreground of the riverside photo. Keep their facial features, hair, jacket and pose unchanged. Keep the railing, river and buildings in their original positions. Size the person to fit the perspective of the scene and match the overcast light on their skin and clothes.</pre>
+
+<h3>Product into a lifestyle scene</h3>
+<figure>
+<img src="assets/skincare-product-scene-800.webp" alt="A serum bottle placed into a glass and water scene by an AI image combiner" width="800" height="450" loading="lazy">
+</figure>
+<pre>Place the bottle upright on the glass platform in the scene image with its front label facing the camera. Preserve the exact bottle shape, dropper, glass color and label. Keep the leaves, water and stone where they are. Match the directional daylight of the scene and add a grounded contact shadow and a subtle reflection.</pre>
+
+<h3>Furniture into a room</h3>
+<figure>
+<img src="assets/furniture-room-preview-800.webp" alt="An armchair inserted into a living room photo by an AI image combiner" width="800" height="450" loading="lazy">
+</figure>
+<pre>Place the armchair in the open floor area of the room photo, leaving a clear walkway. Preserve its shape, upholstery color and legs. Keep the walls, flooring, artwork and sofa unchanged. Scale it against the existing furniture and match the window light with a soft floor shadow.</pre>
+
+<h2>Running a merge, step by step</h2>
+<div class="steps">
+<div><img src="assets/tutorial-upload.webp" alt="Uploading reference photos to the AI image combiner" width="1024" height="1024" loading="lazy"><p><strong>Upload.</strong> Add 2 to 4 reference photos.</p></div>
+<div><img src="assets/tutorial-prompt.webp" alt="Writing a composition prompt in the AI image combiner" width="1024" height="1024" loading="lazy"><p><strong>Describe.</strong> Paste a template and adjust it to your photos.</p></div>
+<div><img src="assets/tutorial-result.webp" alt="Reviewing the merged image from the AI image combiner" width="1024" height="1024" loading="lazy"><p><strong>Generate.</strong> Choose an aspect ratio, review, download.</p></div>
+</div>
+
+<h2>Troubleshooting</h2>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Problem</th><th>Likely cause</th><th>Fix</th></tr></thead>
+<tbody>
+<tr><td>A face looks slightly different</td><td>Low-resolution or soft source portrait</td><td>Use a sharper photo and ask to keep facial features exactly as shown</td></tr>
+<tr><td>Subject looks too large or small</td><td>No scale reference in the prompt</td><td>Name an object to scale against, such as the sofa or the railing</td></tr>
+<tr><td>Subject seems to float</td><td>Missing contact shadow</td><td>Ask for a grounded contact shadow on the surface it rests on</td></tr>
+<tr><td>Background changed</td><td>Scene image not identified</td><td>State which photo is the background and that its layout must stay unchanged</td></tr>
+<tr><td>Logo or label text is distorted</td><td>Label is small or angled in the source</td><td>Use a front-facing product photo and ask to preserve the label</td></tr>
+<tr><td>Lighting feels flat</td><td>Sources lit from opposite sides</td><td>Tell the combiner to follow the light direction of the scene</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Good to know</h2>
+<ul>
+<li>New accounts on Tancky AI get trial credits, so the AI image combiner can be tested for free.</li>
+<li>Credits are returned automatically when a generation is confirmed as failed.</li>
+<li>Finished images carry no watermark and can be used commercially.</li>
+</ul>
+<a class="cta" href="https://tancky.io">Try the AI Image Combiner free</a>
+
+<h2>Further reading</h2>
+<ul>
+<li><a href="https://tancky.io/blog/how-to-combine-two-images-with-ai">How to combine two images with AI</a>, the full walkthrough on the Tancky AI blog</li>
+<li><a href="https://github.com/tancky777/ai-image-combiner">Project overview on GitHub</a></li>
+</ul>
+
+<footer>This guide is maintained alongside <a href="https://tancky.io">Tancky AI</a>. Example images are AI generated.</footer>
+</main>
+</body>
+</html>
