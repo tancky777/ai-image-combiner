@@ -95,6 +95,6 @@ Yes. Finished composites include commercial rights.
 ## Links
 
 - AI Image Combiner: [https://tancky.io](https://tancky.io)
-- Guide: [How to combine two images](https://tancky.io/blog)
+- Guide: [How to combine two images with AI](https://tancky.io/blog/how-to-combine-two-images-with-ai)
 - Pricing: [https://tancky.io/pricing](https://tancky.io/pricing)
 - Updates: [https://tancky.io/updates](https://tancky.io/updates)
