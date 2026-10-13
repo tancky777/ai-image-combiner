@@ -1,0 +1,39 @@
+name: Publish to MCP Registry
+
+# 手动触发：把 server.json 发布到 MCP 官方注册表（registry.modelcontextprotocol.io）。
+# 用 GitHub OIDC 认证，名字必须以 io.github.tancky777/ 开头，不需要任何密钥。
+# 每次发布前先把 server.json 里的 version 改成新版本号，同一版本号不能重复发布。
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install mcp-publisher
+        run: |
+          curl -sSL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
+
+      - name: Check the remote endpoint is live
+        run: |
+          url=$(jq -r '.remotes[0].url' server.json)
+          curl -sSf -X POST "$url" \
+            -H 'Content-Type: application/json' \
+            -H 'Accept: application/json, text/event-stream' \
+            -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"publish-check","version":"1"}}}' \
+            | grep -q '"serverInfo"'
+
+      - name: Validate server.json
+        run: ./mcp-publisher validate
+
+      - name: Login to MCP Registry
+        run: ./mcp-publisher login github-oidc
+
+      - name: Publish to MCP Registry
+        run: ./mcp-publisher publish

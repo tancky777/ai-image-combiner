@@ -85,6 +85,30 @@ Yes. Every new user gets trial credits on signup, with optional credit packs and
 **Can I use the generated images commercially?**
 Yes. Finished composites include commercial rights.
 
+## Use it from an AI assistant (MCP server)
+
+Tancky AI is listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/) as `io.github.tancky777/ai-image-combiner`. Connect any MCP client (Claude, Cursor, VS Code and others) to the remote endpoint below to let your assistant find the right [AI image combiner](https://tancky.io) tool, its link, prices and FAQ answers.
+
+- Endpoint: `https://tancky.io/api/mcp`
+- Transport: Streamable HTTP
+- Authentication: none, read only
+
+```json
+{
+  "mcpServers": {
+    "tancky-ai": {
+      "type": "http",
+      "url": "https://tancky.io/api/mcp"
+    }
+  }
+}
+```
+
+| Tool | What it does |
+| --- | --- |
+| `list_tools` | Lists the Tancky AI photo tools with links and credit prices per image. Optional `locale`: `en` or `zh`. |
+| `get_tool_faq` | Returns the FAQ of one tool, by the `id` from `list_tools`. |
+
 ## More AI photo tools
 
 - [AI Couple Photo Maker](https://tancky.io/ai-couple-photo-maker)
