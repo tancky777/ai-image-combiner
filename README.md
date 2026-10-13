@@ -87,9 +87,9 @@ Yes. Finished composites include commercial rights.
 
 ## Use it from an AI assistant (MCP server)
 
-Tancky AI is listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/) as `io.github.tancky777/ai-image-combiner`. Connect any MCP client (Claude, Cursor, VS Code and others) to the remote endpoint below to let your assistant find the right [AI image combiner](https://tancky.io) tool, its link, prices and FAQ answers.
+Tancky AI is listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/) as `io.github.tancky777/ai-image-combiner`. Connect any MCP client (Claude, Cursor, VS Code and others) to the remote endpoint below to let your assistant find the right [AI image combiner](https://tancky.io) tool, its link and step-by-step guides. Source code: [`mcp/`](mcp/).
 
-- Endpoint: `https://tancky.io/api/mcp`
+- Endpoint: `https://tancky-mcp.tancky777-482.workers.dev/mcp`
 - Transport: Streamable HTTP
 - Authentication: none, read only
 
@@ -98,7 +98,7 @@ Tancky AI is listed in the [official MCP Registry](https://registry.modelcontext
   "mcpServers": {
     "tancky-ai": {
       "type": "http",
-      "url": "https://tancky.io/api/mcp"
+      "url": "https://tancky-mcp.tancky777-482.workers.dev/mcp"
     }
   }
 }
@@ -106,8 +106,8 @@ Tancky AI is listed in the [official MCP Registry](https://registry.modelcontext
 
 | Tool | What it does |
 | --- | --- |
-| `list_tools` | Lists the Tancky AI photo tools with links and credit prices per image. Optional `locale`: `en` or `zh`. |
-| `get_tool_faq` | Returns the FAQ of one tool, by the `id` from `list_tools`. |
+| `list_tools` | Lists the Tancky AI photo tools with links and descriptions. Optional `locale`: `en` or `zh`. |
+| `search_guides` | Finds Tancky AI guides on combining and blending photos. Optional `query`. |
 
 ## More AI photo tools
 

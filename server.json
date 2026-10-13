@@ -12,7 +12,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://tancky.io/api/mcp"
+      "url": "https://tancky-mcp.tancky777-482.workers.dev/mcp"
     }
   ]
 }
