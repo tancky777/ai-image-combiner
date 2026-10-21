@@ -4,6 +4,8 @@ Read-only remote MCP server for [Tancky AI](https://tancky.io), deployed as a st
 
 It keeps no copy of the site's data. Tools and guides are parsed from [tancky.io/llms.txt](https://tancky.io/llms.txt) and cached for one hour, so new pages on the site appear without a redeploy.
 
+The tools live in `src/server.ts`. `src/index.ts` serves them from the Worker over Streamable HTTP, and `src/stdio.ts` serves the same tools over stdio for local clients (`node src/stdio.ts`, Node.js 22.18 or later).
+
 ## Develop and deploy
 
 ```bash

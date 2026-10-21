@@ -109,6 +109,13 @@ Tancky AI is listed in the [official MCP Registry](https://registry.modelcontext
 | `list_tools` | Lists the Tancky AI photo tools with links and descriptions. Optional `locale`: `en` or `zh`. |
 | `search_guides` | Finds Tancky AI guides on combining and blending photos. Optional `query`. |
 
+To run it locally over stdio instead (Node.js 22.18 or later):
+
+```bash
+cd mcp && npm ci --omit=dev
+node src/stdio.ts
+```
+
 ## More AI photo tools
 
 - [AI Couple Photo Maker](https://tancky.io/ai-couple-photo-maker)
